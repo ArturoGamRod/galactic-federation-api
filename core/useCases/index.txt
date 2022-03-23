@@ -1,0 +1,66 @@
+export function getMessage(message: string[]) {
+
+    let currentSat = sats[0];
+    let lastWord = "";
+    while (true) {
+
+        const currentWord = currentSat.message[currentSat.pos];
+
+        if (currentWord && currentSat.message[currentSat.pos] != "" && lastWord != currentWord) {
+            result += currentWord + " ";
+            lastWord = currentWord;
+
+            if (currentSat.pos < currentSat.message.length) {
+
+                currentSat.pos += 1;
+                for (let sat of sats) {
+                    if (sat.pos < currentSat.pos)
+                        if (currentSat.pos < sat.message.length)
+                            sat.pos = currentSat.pos;
+                        else
+                            sat.pos = sat.message.length - 1;
+
+                }
+
+            }
+        }
+
+        else {
+
+            const satIndex = sats.indexOf(currentSat);
+            if (currentSat.pos < currentSat.message.length) {
+                currentSat.pos++;
+            }
+
+            const next = sats.filter(i => i.pos > 0 && i.message[i.pos - 1] == lastWord && lastWord != "" && i.message[i.pos] != "" && i.pos < i.message.length - 1);
+
+            if (next.length > 0) {
+                currentSat = next[0];
+            }
+
+
+            else if (satIndex == sats.length - 1) {
+                currentSat = sats[0];
+
+            }
+            else
+                currentSat = sats[satIndex + 1];
+
+        }
+
+        let finishCount = 0;
+        for (let sat of sats) {
+            if (sat.pos == sat.message.length)
+                finishCount += 1;
+        }
+
+        if (finishCount == sats.length)
+            break;
+        // if ( && sats[1].pos == sats[1].message.length && sats[2].pos == sats[2].message.length)
+        //     break;
+    }
+
+    console.log(result);
+
+
+}

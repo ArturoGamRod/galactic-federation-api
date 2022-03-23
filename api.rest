@@ -1,0 +1,57 @@
+###
+POST http://localhost:3000/topsecret
+Content-Type: application/json
+
+{ 
+    "satellites": [ 
+                { 
+                "name": "kenobi", 
+                "distance": 562.69, 
+                "message": ["this", "", "", "secret", ""] 
+                }
+                ,{ 
+                "name": "skywalker", 
+                "distance": 532.83,
+                "message": ["", "is", "", "", "message"] 
+                }
+                ,{ 
+                "name": "sato", 
+                "distance": 775.39,
+                "message": ["this", "", "a", "", ""] 
+                } 
+    ] 
+}
+
+
+###
+GET http://localhost:3000/topsecret_split/
+
+###
+POST http://localhost:3000/topsecret_split/kenobi
+Content-Type: application/json
+
+{ 
+"distance": 562.69, 
+"message": ["this", "", "", "secret", ""] 
+}
+
+###
+POST http://localhost:3000/topsecret_split/skywalker
+Content-Type: application/json
+
+{ 
+"distance": 532.83, 
+"message":  ["", "is", "", "", "message"] 
+}
+
+###
+POST http://localhost:3000/topsecret_split/sato
+Content-Type: application/json
+
+{ 
+"distance":775.39, 
+"message": ["this", "", "a", "", ""] 
+}
+            
+###
+DELETE  http://localhost:3000/topsecret_split

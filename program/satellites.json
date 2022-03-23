@@ -1,0 +1,38 @@
+[
+    {
+        "name": "kenobi",
+        "position": {"x":-500, "y":-200},
+        "distance": 562.69,
+        "message": [
+            "this",
+            "",
+            "",
+            "message",
+            ""
+        ]
+    },
+    {
+        "name": "skywalker",
+        "distance": 532.83,
+        "position": {"x":100,"y":-100},
+        "message": [
+            "",
+            "is",
+            "",
+            "",
+            "secret"
+        ]
+    },
+    {
+        "name": "sato",
+        "distance": 775.39,
+        "position": {"x":500,"y":100},
+        "message": [
+            "this",
+            "",
+            "a",
+            "",
+            ""
+        ]
+    }
+]
