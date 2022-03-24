@@ -1,8 +1,20 @@
 # galactic-federation-api
 
+### Considerations for the message calculation:
+
+- A message should always be generated no matter what. Since there is no hard rules on how to build the message, the result is the most probable outcome. 
+
+### Considerations for the location calculation:
+
+- The trilateration algorithm was used
+- you can only use the satellite names mentiones in the documentation; doing otherwise will result in a error
+- the trilateration algorithm is not perfect and confirmation for the distances after the calculation was nedded.
+
 ## API
 
 public api url: https://api.galactic-federation.devspot.work
+
+The API is published in a GCloud kubernetes instance:
 
 ![image](https://user-images.githubusercontent.com/9491277/159808406-4f8c5a11-8e23-4e6f-826a-ada1cd62955e.png)
 
@@ -31,9 +43,9 @@ the program version consumes a json file in the path program\satellites.json. Yo
 ![image](https://user-images.githubusercontent.com/9491277/159822018-c7c2f78e-45e8-4573-9f71-df9602a19777.png)
 
 
-to run the program:
+### To run the program:
 
-1. npm install
+1.- npm install
 
 2.- "npm run program message" to calculate the message
 
@@ -52,13 +64,13 @@ Typescript\
 express.js\
 morgan\
 jest\
-ts-node-dev\
+ts-node-dev
 
 ## deployment tools
 
 Docker\
 Docker Compose\
-Kubernetes\
+Kubernetes
 
 ## API publishing
 
@@ -71,6 +83,15 @@ Http redirects to https
 
 Clean Architecture: application and domain layers were merged into "core" folder for simplicity in this project\
 Solid principles\
-Test Driven Development\: "npm run test" to run tests :) \
+Test Driven Development\: "npm run test" to run tests :) 
+
+
+# Plus
+
+A Mint Site I developed a few weeks ago with Solidity and hardhat (Also in GCloud with Kubernetes):
+
+https://cuties.devspot.work
+
+
 
 
