@@ -7,7 +7,7 @@
 ### Considerations for the location calculation:
 
 - The trilateration algorithm was used
-- you can only use the satellite names mentiones in the documentation; doing otherwise will result in a error
+- you can only use the satellite names mentioned in the documentation; doing otherwise will result in a error
 - the trilateration algorithm is not perfect and confirmation for the distances after the calculation was nedded.
 
 ## API
