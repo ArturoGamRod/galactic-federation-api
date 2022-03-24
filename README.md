@@ -14,3 +14,11 @@ POST /topsecret <br/>
 POST /topsecret_split/:satellite_name <br/>
 GET /topsecret_split <br/>
 DELETE /topsecret_split <br/>
+
+postman collection:
+
+https://documenter.getpostman.com/view/5573967/UVsTp22U
+
+You can use this postman collection to facilitate testing the public endpoint with Curl or you prefered language.
+
+![image](https://user-images.githubusercontent.com/9491277/159820344-1647ddf3-443c-49b7-a785-6dc8d1cf6ce3.png)
